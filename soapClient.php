@@ -3,12 +3,12 @@
 // Run this file from CLI : 
 // $ php soapClient.php
 $client = new SoapClient(
-    'http://127.0.0.1:8001/soap/hello?wsdl',  
+    'http://127.0.0.1:8001/soap/gustavo?wsdl',  
     ['cache_wsdl' => 0]  /* very important */
 );
 
 try {
-    $response = $client->hello("Foobar H:" . date('H:i:s'));
+    $response = $client->gustavo("Foobar H:" . date('H:i:s'));
     echo "\n Response : $response \n";
 
 } catch (SoapFault $fault) {
